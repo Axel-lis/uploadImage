@@ -1,0 +1,14 @@
+PHP AJAX image upload UI with jQuery
+//* https://github.com/Axel-lis *//
+Este ejemplo de subida de imagen tiene dos archivos:
+1-El primero es para que la INTERFAZ DEL USUARIO evoque al script del backend sin el "form submit".
+2-El segundo archivo es el script PHP del backend que hace el verdadero trabajo de subir la imagen. Lo graba y responde con un output de la imagen.
+
+Usamos la llamada AJAX sin necesitad del "form submit". Para la llamada AJAX PHP usamos JQuery para invocar la llamada. 
+Incluí el codigo JS al final del bodyHTML para mejorar el performance de la página.
+Cualquier version de JQuery que se use debería funcionar perfectamente.
+Para el upload de imagenes con AJAX el  enctype='multipart/form-data' no es requereido ya que no estamos subiendolos via POST. Usamos data transfer de AJAX y el multipart form data no es requerido para el upload de imagenes . 
+
+Para el upload de la imagen usando AJAX necesitamos un script de backend que haga el procesado. En este caso sera el upload.php y lo almacené en la carpeta backend.
+Al invocar el AJAX, este "upload.php" mueve el archivo desde el disco y devuelve el elemento HTML img que hace referencia al subido del form.
+Luego esto agregara al DIV marcado el HTML img que contiene el archivo para que pueda ser visualizado por los usuarios. 
